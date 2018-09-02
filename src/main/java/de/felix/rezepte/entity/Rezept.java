@@ -1,12 +1,15 @@
 package de.felix.rezepte.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Rezept {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int rezeptId;
 	private String name;
 	private String details;

@@ -22,9 +22,8 @@ public class RezepteApplication {
 	@Bean
 	public CommandLineRunner demo(RezepteRepository repository) {
 		return (args) -> {
-			// save a couple of customers
-			
-			for(int i = 0;i<10000;i++) {
+			// save recipes			
+			for(int i = 1;i<100;i++) {
 				repository.save(new Rezept("Kuchen+i","Details"+i,"Status"+i));
 			}			
 			
